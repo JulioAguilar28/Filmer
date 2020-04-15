@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="film"
+            type="com.julio.filmler.network.Film"/>
+
+        <variable
+            name="clickListener"
+            type="com.julio.filmler.filmOverview.FilmClickListener" />
+    </data>
+
+    <ImageView
+        android:id="@+id/film_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        app:imgUrl="@{film.poster_path}"
+        android:onClick="@{() -> clickListener.onClick(film)}"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+</layout>

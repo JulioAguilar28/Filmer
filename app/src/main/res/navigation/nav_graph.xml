@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Julio's app"
+    app:startDestination="@id/filmOverviewFragment">
+
+    <fragment
+        android:id="@+id/filmOverviewFragment"
+        android:name="com.julio.filmler.filmOverview.FilmOverviewFragment"
+        android:label="@string/title_popular_movies"
+        tools:layout="@layout/film_overview_fragment">
+        <action
+            android:id="@+id/action_overview_to_detail"
+            app:destination="@id/filmDetailFragment"
+            app:popUpTo="@id/filmOverviewFragment" />
+        <action
+            android:id="@+id/action_overview_to_search"
+            app:destination="@id/filmSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmDetailFragment"
+        android:name="com.julio.filmler.filmDetail.FilmDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/film_detail_fragment">
+        <argument
+            android:name="clickedFilm"
+            app:argType="com.julio.filmler.network.Film" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.julio.filmler.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/filmSearchFragment"
+        android:name="com.julio.filmler.filmSearch.FilmSearchFragment"
+        android:label="@string/search" >
+        <action
+            android:id="@+id/action_search_to_detail"
+            app:destination="@id/filmDetailFragment" />
+    </fragment>
+</navigation>

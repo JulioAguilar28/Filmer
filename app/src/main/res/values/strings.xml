@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Filmler</string>
+    <string name="title_popular_movies">Popular Movies</string>
+    <string name="back_to_overview">Back to overview</string>
+    <string name="about_fragment">About</string>
+    <string name="about_title">My first app</string>
+    <string name="about_text">In this app you can consult about the most popular movies, which are consulting from The Movies DataBase, I tried to build something basic where i could to implement the learned in the Android course whit Kotlin at Udacity. I\'m a beginner android programmer and i\'d like to learn more about it. I\'ll try to build anything more complex where i could to implement harder things.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite">Favorite</string>
+    <string name="add_favorite">Favorite</string>
+    <string name="favorites_films">Favorites Films</string>
+    <string name="search">Search</string>
+    <string name="not_found">Movie not found</string>
+</resources>
